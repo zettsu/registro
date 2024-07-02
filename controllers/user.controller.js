@@ -29,44 +29,18 @@ const userController = {
             res.json({ msg: error.msg })
         }
     },
-    login: async (req, res) => {
-        try {
-            const { usuario, password } = req.body
-
-            if(usuario == undefined || password == undefined) {
-                return res.status(400).json({ msg: "missing fields" })
-            }
-
-            const { rows } = await postgre.query("select * from users where name = $1 limit 1", [usuario])
-            
-            if (rows.length > 0) {
-                validateUser(password, rows[0].password, res);
-            }else{
-                return res.status(401).json({ msg: "unauthorized" })
-            }
-        } catch (error) {
-            res.json({ msg: error.msg })
-        }
-    },
     create: async (req, res) => {
         try {
             const { usuario, password } = req.body
 
-            if(usuario == undefined || password == undefined) {
+            if (usuario == undefined || password == undefined) {
                 return res.status(400).json({ msg: "missing fields" })
             }
 
-            const { rows } = await postgre.query("select * from users where name = $1 limit 1", [usuario])
-            
-            if (rows.length > 0) {
-                return res.status(400).json({ msg: "already exists a user with that name" })
-            }
+            const sql = 'INSERT INTO users(name, password) VALUES($1, $2) RETURNING *'
+            const { rows } = await postgre.query(sql, [usuario, hash])
 
-            bcrypt
-                .hash(password, 10).then(hash => {
-                    return hash;
-                }).then(hash => saveUser(usuario, hash, res));
-
+            res.json({ msg: "OK", data: rows[0] })
         } catch (error) {
             res.json({ msg: error.msg })
         }

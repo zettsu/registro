@@ -25,19 +25,24 @@ document.querySelectorAll(".btn").forEach(btn => {
             if (current_index == 3) {
                 let usuario = document.getElementById("usuario").value;
                 let pass = document.getElementById("password-0").value + document.getElementById("password-1").value + document.getElementById("password-2").value + document.getElementById("password-3").value;
-                let result = await authenticate(usuario, `${pass}`) 
+                let result = await register(usuario, `${pass}`) 
                 if(result){
                     let first_step = document.getElementById("first-step");
                     let second_step = document.getElementById("second-step");
-                    
-                    if (document.getElementById("success").classList.contains("hide")) {
-                        document.getElementById("success").classList.remove('hide');
+                    let title = document.getElementById("title");
+                    let success = document.getElementById("success");
+
+                    if (success.classList.contains("hide")) {
+                        success.classList.remove('hide');
+                    }
+                    if (!title.classList.contains("hide")) {
+                        title.classList.add('hide');
                     }
                     if (!first_step.classList.contains("hide")) {
-                        document.getElementById("first-step").classList.add('hide');
+                        first_step.classList.add('hide');
                     }
                     if (!second_step.classList.contains("hide")) {
-                        document.getElementById("second-step").classList.add('hide');
+                        second_step.classList.add('hide');
                     }
                 }else{
                     current_index = 0;

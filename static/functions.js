@@ -1,7 +1,7 @@
 
-async function authenticate(user, pass) {
+async function register(user, pass) {
     try {
-        const response = await fetch("/api/v1/users/login", {
+        const response = await fetch("/api/v1/users/", {
             headers:{
                 'Content-Type': 'application/json'
             },
