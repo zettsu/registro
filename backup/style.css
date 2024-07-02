@@ -1,0 +1,352 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 20%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --grey:RGB(215 215 215);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--white);
+    height: 100%;
+}
+
+* {
+    font-family: "Overpass", serif;
+}
+
+.text-container {
+    font-weight: 400;
+    color: var(--light-grey);
+    font-size: 1rem;
+}
+
+.text-container>h1 {
+    color: white;
+}
+
+.rate-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 7%;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex: 0 0 33.3333%;
+    flex-flow: row;
+}
+
+.hide {
+    display: none;
+}
+
+.button-container {
+    width: 100%;
+}
+
+.btn-submit  {
+    background-color: var(--orange);
+    color: var(--white);
+    border-radius: 25px;
+    height: 40px;
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-color: transparent;
+    margin-bottom: 50px;
+}
+
+.button-option {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-option:nth-child(n+2) {
+    margin-left: 8%;
+}
+
+
+.orange {
+    background-color: var(--orange) !important;
+}
+
+.input {
+    position: relative;
+}
+
+.input-container {
+    width: 70%;
+}
+
+input[type="text"] {
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px var(--orange);
+    padding: 20px 2px 5px;
+    transition: padding 0.4s;
+    width: 80%;
+}
+
+input[type="text"]:placeholder-shown+label {
+    color: var(--orange);;
+    font-size: 1rem;
+    top: 15px;
+    left: 70px;
+}
+
+
+input[type="text"]:focus+label,
+label {
+    color: var(--orange);
+    font-size: 0.8rem;
+    pointer-events: none;
+    position: absolute;
+    left: 50px;
+    top: 2px;
+    transition: top 0.4s, left 0.4s, font-size 0.4s;
+}
+
+input[type="text"]::placeholder {
+    color: transparent;
+    display: none;
+}
+
+input[type="text"]:focus,
+input[type="text"]:not(:placeholder-shown) {
+    border-bottom: solid 1px var(--orange);
+    outline: none;
+}
+
+
+
+.btn {
+    background-color: var(--white);
+    border-radius: 100%;
+    padding: 25%;
+    width: 4rem;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--orange);
+}
+
+.btn-vacio {
+    background-color: transparent;
+    border-radius: 100%;
+    padding: 25%;
+    width: 4rem;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--orange);
+    outline: none;
+    border-color: transparent;
+}
+
+.btn-vacio:hover {
+    background-color: transparent;
+    border-radius: 100%;
+    padding: 25%;
+    width: 4rem;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--orange);
+    outline: none;
+    border-color: transparent;
+}
+
+.btn-borrar {
+    background-color: var(--white);
+    border-radius: 100%;
+    padding: 25%;
+    width: 4rem;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--orange);
+}
+
+.mt {
+    margin-top: 15px;
+}
+
+input[type="password"] {
+    color: transparent !important;
+    background-color: var(--grey);
+    border-color: var(--grey);
+    border: none;
+    outline:0;
+    border-radius: 100%;
+    margin-left: 5px;
+    padding: 10%;
+    width: 2.1rem;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+input[type="password"]:active {
+    color: transparent !important;
+    background-color: var(--grey);
+    border-color: var(--grey);
+    border: none;
+    border-radius: 100%;
+    padding: 30%;
+    width: 2.2rem;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+
+.empty{
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+
+.empty:hover {
+    color: transparent;
+    background-color: transparent;
+}
+
+input[type="button"].btn:hover {
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+.icon-container {
+    display: flex;
+    width: 100%;
+}
+
+.icon-container>.icon {
+    border-radius: 50%;
+    padding: 4%;
+    background-color: var(--medium-grey);
+}
+
+body {
+    padding-top: 40%;
+}
+
+.flex {
+    display: flex;
+}
+
+.rate-option{
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.ml{
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.mt-25{
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.badge {
+    margin-top: 5%;
+    font-weight: 400;
+    color: var(--orange);
+    font-size: 1rem;
+    background-color: var(--medium-grey);
+    padding: 2% 4% 2% 4%;
+    border-radius: 25px;
+}
+
+.image-container {
+    margin-top: 20px;
+}
+
+.centered {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+body {
+    padding-top: 0%;
+}
+
+.container {
+    width: 50%;
+    font-size: 24px;
+    flex-flow: column;
+    min-height: 11vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 25px;
+    flex-flow: column;
+}
+
+.container-first-step {
+    min-height: 30vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.thank-you-container {
+    padding: 30px 20px 20px 20px;
+}
+
+@media only screen and (min-width: 375px) {
+    .container {
+        /*     max-width: 300px;*/
+    }
+}
+
+h1 {
+    color: var(--orange);
+    font-size: 5rem;
+}

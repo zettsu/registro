@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Inicio de Sesion</title>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <h1 class="centered">Frix</h1>
+      <form id="form-login" action="#" method="post">
+        <div class="" id="first-step">
+
+          <div class="centered">
+            <div class="input">
+              <input id="usuario" type="text" name="usuario" placeholder="miusuario" />
+              <label for="usuario">Usuario Frix</label>
+            </div>
+          </div>
+          <div class="container-first-step centered">
+            <div class="button-container">
+              <input type="submit" class="btn-submit" name="btn" id="btn-submit" value="siguiente" />
+            </div>
+          </div>
+
+        </div>
+
+        <div class="step hide" id="second-step">
+          <div class="row">
+            <div class="mt-25">
+              <input type="password" class="password" name="password[]" id="password-0" maxlength="1" />
+            </div>
+            <div class="ml-25 mt-25">
+              <input type="password" class="password" name="password[]" id="password-1" maxlength="1" />
+            </div>
+            <div class="ml-25 mt-25">
+              <input type="password" class="password" name="password[]" id="password-2" maxlength="1" />
+            </div>
+            <div class="ml-25 mt-25">
+              <input type="password" class="password" name="password[]" id="password-3" maxlength="1" />
+            </div>
+          </div>
+          <div class="row mt">
+            <div class="rate-option">
+              <input type="button" class="btn" value="1" />
+            </div>
+            <div class="rate-option">
+              <input type="button" class="btn" value="2" />
+            </div>
+            <div class="rate-option">
+              <input type="button" class="btn" value="3" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="rate-option">
+              <input type="button" class="btn" value="4" />
+            </div>
+            <div class="rate-option">
+              <input type="button" class="btn" value="5" />
+            </div>
+            <div class="rate-option">
+              <input type="button" class="btn" value="6" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="rate-option">
+              <input type="button" class="btn" value="7" />
+            </div>
+            <div class="rate-option">
+              <input type="button" class="btn" value="8" />
+            </div>
+            <div class="rate-option">
+              <input type="button" class="btn" value="9" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="rate-option">
+              <input type="button" class="btn-vacio" value="" />
+            </div>
+            <div class="rate-option">
+              <input type="button" class="btn" value="0" />
+            </div>
+            <div class="rate-option">
+              <input type="button" class="btn-borrar" id="borrar" value="<" />
+            </div>
+          </div>
+        </div>
+        <div class="centered hide" id="success">
+          <div class="image-container">
+            <img src="static/ok.png" alt="success" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="attribution">
+
+      </div>
+    </div>
+  </footer>
+  <script src="/static/functions.js"></script>
+  <script src="/static/index.js"></script>
+</body>
+
+</html>
