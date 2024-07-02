@@ -38,7 +38,7 @@ const userController = {
             }
 
             const sql = 'INSERT INTO users(name, password) VALUES($1, $2) RETURNING *'
-            const { rows } = await postgre.query(sql, [usuario, hash])
+            const { rows } = await postgre.query(sql, [usuario, password])
 
             res.json({ msg: "OK", data: rows[0] })
         } catch (error) {
